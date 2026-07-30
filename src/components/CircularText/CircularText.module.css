@@ -1,0 +1,157 @@
+/* ==========================================================================
+   CircularText — Premium rotating text component
+   Inspired by chkstepan.com · Original implementation
+   ========================================================================== */
+
+/* ── Container ────────────────────────────────────────────────────────────── */
+
+.circularTextContainer {
+  --ct-size: 220px;
+  --ct-text-color: #1a1a1a;
+  --ct-font-family: inherit;
+  --ct-font-weight: 600;
+  --ct-letter-spacing: 0.18em;
+  --ct-border-color: rgba(0, 0, 0, 0.08);
+  --ct-glow-color: rgba(0, 0, 0, 0.06);
+
+  position: relative;
+  width: var(--ct-size);
+  height: var(--ct-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Rotating text ring ───────────────────────────────────────────────────── */
+
+.circularText {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: circularRotate var(--ct-speed, 18s) linear infinite;
+  will-change: transform;
+}
+
+.circularText.paused {
+  animation-play-state: paused;
+}
+
+.circularText.counterClockwise {
+  animation-direction: reverse;
+}
+
+/* ── Individual character ─────────────────────────────────────────────────── */
+
+.char {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 50%;
+  transform-origin: bottom center;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.charInner {
+  display: block;
+  text-transform: uppercase;
+  font-weight: var(--ct-font-weight);
+  font-family: var(--ct-font-family);
+  color: var(--ct-text-color);
+  letter-spacing: var(--ct-letter-spacing);
+  line-height: 1;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Center content ───────────────────────────────────────────────────────── */
+
+.centerContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Optional border ring ─────────────────────────────────────────────────── */
+
+.borderRing {
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--ct-border-color);
+  pointer-events: none;
+  z-index: 1;
+  transition: border-color 0.4s ease;
+}
+
+/* ── Optional glow behind center ──────────────────────────────────────────── */
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: var(--ct-glow-color);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: 0;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+  opacity: 0.7;
+}
+
+/* ── Hover effects on container ───────────────────────────────────────────── */
+
+.circularTextContainer:hover .centerContent {
+  transform: scale(1.08);
+}
+
+.circularTextContainer:hover .borderRing {
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+.circularTextContainer:hover .glow {
+  filter: blur(32px);
+  opacity: 1;
+}
+
+/* ── Rotation keyframes ───────────────────────────────────────────────────── */
+
+@keyframes circularRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+/* Tablet: 768px–1023px */
+@media (max-width: 1023px) {
+  .circularTextContainer {
+    --ct-size: 180px;
+  }
+}
+
+/* Mobile: < 768px */
+@media (max-width: 767px) {
+  .circularTextContainer {
+    --ct-size: 140px;
+  }
+}
