@@ -151,14 +151,13 @@ export default function Home() {
                 letterSpacing="0.22em"
                 centerContent={
                   <img
-                    src="/assets/kalpesh.jpg"
-                    alt="Kalpesh Prajapati"
+                    src="/assets/favicon.jpg"
+                    alt="Kalpesh Prajapati Favicon"
                     style={{
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      objectPosition: "center top",
-                      filter: "grayscale(1)",
+                      objectPosition: "center",
                     }}
                   />
                 }
