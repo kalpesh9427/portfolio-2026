@@ -21,24 +21,26 @@ export const projects: Project[] = [
     name: "Tulsi Trader",
     slug: "tulsi-trader",
     year: "2026",
-    description: "Live client web application for Tulsi Trader, engineered to deliver a seamless, high-performance digital experience with responsive design and modern web architecture.",
-    longDescription: "A custom full-stack web application designed, developed, and deployed live for Tulsi Trader. Built with modern web technologies, it features high-speed performance, intuitive user interface design, and robust client integration across all devices.",
-    technologiesUsed: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful APIs"],
+    description: "Live client web application for Tulsi Trader, engineered to deliver a seamless, high-performance digital experience with responsive design and interactive animations.",
+    longDescription: "A custom frontend web application designed, developed, and deployed live for Tulsi Trader. Built with clean semantic HTML, CSS, and JavaScript, it features high-speed performance, interactive UI animations, and robust client integrations across all devices.",
+    technologiesUsed: ["HTML5", "CSS3", "JavaScript", "GSAP 3.12.2", "Google Font API", "Open Graph", "HTTP/3", "LiteSpeed", "Google Maps", "Hostinger"],
     keyFeatures: [
       "Live client web application hosted at tulsitrader.in",
       "Fully responsive UI/UX designed for desktop, tablet, and mobile devices",
-      "High-performance REST API integration and database management",
-      "Modern frontend architecture built with scalable web components"
+      "Interactive animations and transitions powered by GSAP",
+      "Integrated Google Maps API for physical storefront location tracking",
+      "Optimized for HTTP/3 and hosted on high-performance LiteSpeed servers via Hostinger"
     ],
     challengesSolved: [
-      "Optimized frontend bundle and asset loading for fast page rendering",
-      "Implemented clean user navigation and responsive layouts for all viewports",
-      "Configured live domain routing and production server deployment"
+      "Optimized assets and image loading to achieve fast page rendering times",
+      "Implemented clean semantic HTML structures and responsive stylesheets",
+      "Configured production hosting, domain redirecting, and security settings on Hostinger",
+      "Integrated metadata standards (Open Graph) to optimize social sharing previews and search rankings"
     ],
     websiteUrl: "https://tulsitrader.in",
     image: "/assets/tulsi.png",
     bgColor: "#ffffff",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful APIs"],
+    tags: ["HTML5", "CSS3", "JavaScript", "GSAP", "Google Maps", "LiteSpeed", "Hostinger"],
   },
   {
     id: "02",
@@ -68,28 +70,28 @@ export const projects: Project[] = [
   },
   {
     id: "03",
-    name: "Woodmart E-Commerce System",
-    slug: "woodmart-ecommerce-system",
+    name: "Sprays Perfume E-Commerce",
+    slug: "sprays-perfume-ecommerce",
     year: "2026",
-    description: "Full-stack e-commerce application featuring product management, shopping cart functionality, user authentication, and order processing.",
-    longDescription: "A feature-rich online shopping platform built to handle product catalog browsing, interactive cart management, dynamic checkout workflows, and inventory tracking with relational MySQL database management.",
-    technologiesUsed: ["React.js", "Node.js", "Express.js", "MySQL", "RESTful APIs"],
+    description: "Premium full-stack perfume and fragrance e-commerce web application featuring high-end design aesthetics, custom dynamic slider, interactive cart, and product filters.",
+    longDescription: "A luxurious e-commerce storefront designed specifically for perfumes and sprays. Built to replace traditional generic layouts with a premium cinematic design, it features interactive slides, precise product options (weight selector), responsive cart drawer, and high-performance routing.",
+    technologiesUsed: ["React (v19)", "React Router (v7)", "Swiper (v12)", "Tailwind CSS (v4)", "GSAP", "RESTful APIs"],
     keyFeatures: [
-      "Product management & dynamic catalog search/filtering",
-      "Interactive shopping cart with real-time price & quantity recalculation",
-      "Secure user authentication & account order history",
-      "Automated order processing & coupon discount system",
-      "Relational MySQL inventory and stock level tracking"
+      "Elegant dark mode hero layout with premium slide transitions (Swiper v12)",
+      "Interactive product details card with size selector (80ml, etc.) and wishlist integrations",
+      "Responsive navigation panel and shopping cart badge tracking",
+      "Vibrant background animations and high-resolution product showcase",
+      "Fully responsive design optimized for seamless desktop and mobile experience"
     ],
     challengesSolved: [
-      "Structured relational data schemas in MySQL to manage complex product variants and coupon rules",
-      "Optimized API endpoint latency during checkout & inventory state updates",
-      "Built resilient client-side state management for cart synchronization"
+      "Engineered a premium look & feel resembling premium themes like Woodmart but optimized for React SPA",
+      "Implemented smooth slider transitions using GSAP and Swiper 12",
+      "Optimized layout responsiveness for the product detail overlay card and feature lists"
     ],
     websiteUrl: "TBD",
-    githubUrl: "https://github.com/Excelsior-Technologies-Community/woodmart-kalpesh",
-    image: "/assets/fitnesswarrior1.jpg",
+    githubUrl: "https://github.com/Excelsior-Technologies-Community/sprays-kalpesh",
+    image: "/assets/sprays.png",
     bgColor: "#ffffff",
-    tags: ["React.js", "Node.js", "Express.js", "MySQL", "RESTful APIs"],
+    tags: ["React", "React Router", "Swiper", "Tailwind CSS", "GSAP"],
   },
 ];
