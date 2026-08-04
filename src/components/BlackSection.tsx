@@ -4,7 +4,6 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MagneticGrid from "./MagneticGrid";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -85,16 +84,12 @@ export default function BlackSection() {
           </h3>
         </div>
 
-        {/* Center: Bounded Interactive Card Widget containing MagneticGrid */}
+        {/* Center: Bounded Interactive Card Widget containing Handshake Image */}
         <div className="relative z-10 w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] h-[260px] sm:h-[320px] md:h-[360px] lg:h-[400px] rounded-2xl md:rounded-[32px] overflow-hidden border border-zinc-200/90 bg-black shadow-[0_25px_60px_rgba(0,0,0,0.15)] my-4 md:my-0 group shrink-0">
-          <MagneticGrid
-            background="#000000"
-            image="/assets/hand shake.jpg"
-            dots={14}
-            gap={8}
-            intensity={8}
-            radius={140}
-            dotColor="#27272a"
+          <img
+            src="/assets/hand shake.jpg"
+            alt="Handshake"
+            className="w-full h-full object-cover"
           />
         </div>
 
