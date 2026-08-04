@@ -34,8 +34,61 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Kalpesh Prajapati | MERN Stack Developer & React.js Specialist",
+  metadataBase: new URL("https://kalpesh-prajapati.dev"),
+  title: {
+    default: "Kalpesh Prajapati | MERN Stack Developer & React.js Specialist",
+    template: "%s | Kalpesh Prajapati"
+  },
   description: "Results-driven MERN Stack Developer specializing in React.js, Next.js, Node.js, Express.js, MongoDB, RESTful APIs, and frontend performance optimization.",
+  keywords: [
+    "Kalpesh Prajapati",
+    "Kalpesh",
+    "Prajapati",
+    "Kalpesh Prajapati Ahmedabad",
+    "Kalpesh Prajapati Developer",
+    "Kalpesh Prajapati Portfolio",
+    "MERN Stack Developer",
+    "React.js Specialist",
+    "Next.js Developer",
+    "Frontend Developer India",
+    "Full Stack Web Developer Ahmedabad"
+  ],
+  authors: [{ name: "Kalpesh Prajapati", url: "https://kalpesh-prajapati.dev" }],
+  creator: "Kalpesh Prajapati",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://kalpesh-prajapati.dev",
+    title: "Kalpesh Prajapati | MERN Stack Developer & React.js Specialist",
+    description: "Results-driven MERN Stack Developer specializing in React.js, Next.js, Node.js, Express.js, MongoDB, RESTful APIs, and frontend performance optimization.",
+    siteName: "Kalpesh Prajapati Portfolio",
+    images: [
+      {
+        url: "/assets/kalpesh.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kalpesh Prajapati - MERN Stack Developer & React.js Specialist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kalpesh Prajapati | MERN Stack Developer & React.js Specialist",
+    description: "Results-driven MERN Stack Developer specializing in React.js, Next.js, Node.js, Express.js, MongoDB, RESTful APIs, and frontend performance optimization.",
+    images: ["/assets/kalpesh.jpg"],
+    creator: "@kalpesh_prajapati",
+  },
   icons: {
     icon: "/assets/favicon.jpg",
   },
