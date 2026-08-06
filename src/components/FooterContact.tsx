@@ -118,7 +118,12 @@ const FooterContact: React.FC = () => {
             {/* Values */}
             <div className="flex flex-col items-start md:items-end gap-1.5">
               <span className="md:hidden text-zinc-500 text-xs uppercase tracking-widest mb-1">contact</span>
-              <a href="mailto:kalpeshprajapti.dev@gmail.com" className="text-white text-sm font-medium hover:text-[#a70f0e] transition-colors duration-300">
+              <a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=kalpeshprajapti.dev@gmail.com&su=${encodeURIComponent("Project Inquiry | Portfolio")}&body=${encodeURIComponent("Hi Kalpesh,\n\nI visited your portfolio and would like to get in touch with you regarding a project or opportunity.\n\nBest regards,")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-sm font-medium hover:text-[#a70f0e] transition-colors duration-300"
+              >
                 kalpeshprajapti.dev@gmail.com
               </a>
               <a href="tel:+919427144690" className="text-white text-sm font-medium hover:text-[#a70f0e] transition-colors duration-300">
@@ -160,12 +165,19 @@ const FooterContact: React.FC = () => {
 
         {/* ── Giant "Let's talk" text ── */}
         <div className="w-full overflow-hidden px-4 md:px-12 py-8 md:py-12 text-center">
-          <h2
-            ref={bigTextRef}
-            className="text-[14vw] sm:text-[15vw] md:text-[16vw] font-black text-white leading-none tracking-tighter uppercase select-none whitespace-nowrap"
+          <a
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=kalpeshprajapti.dev@gmail.com&su=${encodeURIComponent("Project Inquiry | Portfolio")}&body=${encodeURIComponent("Hi Kalpesh,\n\nI visited your portfolio and would like to get in touch with you regarding a project or opportunity.\n\nBest regards,")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block cursor-pointer hover:opacity-90 transition-opacity"
           >
-            LET&apos;S TALK.
-          </h2>
+            <h2
+              ref={bigTextRef}
+              className="text-[14vw] sm:text-[15vw] md:text-[16vw] font-black text-white leading-none tracking-tighter uppercase select-none whitespace-nowrap"
+            >
+              LET&apos;S TALK.
+            </h2>
+          </a>
         </div>
 
         {/* ── Bottom bar ── */}
