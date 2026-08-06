@@ -40,7 +40,9 @@ const Footer = () => {
 
         <div className="flex flex-col items-center gap-2">
           <a
-            href="mailto:kalpeshprajapti.dev@gmail.com"
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=kalpeshprajapti.dev@gmail.com&su=${encodeURIComponent("Project Inquiry | Portfolio")}&body=${encodeURIComponent("Hi Kalpesh,\n\nI visited your portfolio and would like to get in touch with you regarding a project or opportunity.\n\nBest regards,")}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-black uppercase text-white hover:opacity-70 transition-opacity text-xl md:text-2xl lg:text-3xl"
           >
             Email
